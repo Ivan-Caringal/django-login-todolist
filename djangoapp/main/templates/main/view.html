@@ -1,0 +1,15 @@
+{{% extends 'main/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    viewing
+{% endblock %}}
+
+
+{% block content %}
+        <h1>view page</h1>
+    {% for td in user.todolist.all %}
+        <p><a href="/{{td.id}}">{{td.name}}</a></p>
+    {% endfor %}
+{% endblock  %}

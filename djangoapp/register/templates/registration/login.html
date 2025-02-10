@@ -1,0 +1,79 @@
+
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    /* Optional custom styles */
+    .full-height {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- A flex container to center content vertically and horizontally -->
+  <div class="d-flex align-items-center justify-content-center full-height">
+    <div class="container  p-3" style=" position: relative; top: -40px;  width: 50vw; height: 50vh; border: 1px solid black; border-radius: 25px; width: 400px; height: 500px;">  
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h1 class="text-center">Login</h1>
+          <form method="post" class="form-group">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p>Don't have an account? <a href="/register/">Register here</a></p>
+            <button type="submit" class="btn btn-success rounded-5 mx-auto d-block mb-3">Login</button>
+            <a href="/" class="btn btn-danger rounded-5 mx-auto d-block">go to home page</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Optional: Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+      <!-- Use a container with flex utilities and full viewport height -->
+<!--    
+  <div class=" border container d-flex align-items-center justify-content-center" style="height: 100vh; border">
+    <div class="row w-100 justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center">Login</h1>
+        <form method="post" class="form-group">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <p>Don't have an account? <a href="/register/">Register here</a></p>
+          <button type="submit" class="btn btn-success">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+-->
+    <!-- Optional: Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<div class="container "style="border: 1px solid black; border-radius: 25px; width: 400px; height: 400px;"></div>
